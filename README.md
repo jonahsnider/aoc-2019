@@ -1,9 +1,18 @@
-# [TypeScript](https://www.typescriptlang.org) Starter
+# Advent of Code 2019
 
 [![Build Status](https://github.com/pizzafox/typescript-starter/workflows/CI/badge.svg)](https://github.com/pizzafox/typescript-starter/actions)
 [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/xojs/xo)
+[![codecov](https://codecov.io/gh/pizzafox/aoc-2019/branch/master/graph/badge.svg)](https://codecov.io/gh/pizzafox/aoc-2019)
 
-My personal TypeScript starter template.
+My solutions for the Advent of Code 2019 event.
+
+## Project structure
+
+Solutions are in the `src` folder.
+Day 1 will be in the `src/1` folder, day 2 in the `src/2` folder and so on.
+The `index.ts` folder has the actual solution functions in it which are called by the `solve.ts` file.
+Some solution folders may also have a `performance.js` file, which is derived from the `index.ts` file.
+This is a really ugly but more performant version of the solution.
 
 ## Prequisites
 
