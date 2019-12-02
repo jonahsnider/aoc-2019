@@ -62,22 +62,24 @@ interface InputPair {
 export function inputFinder(
 	expectedOutput = 19690720,
 	initialIntcodeProgram: number[] = inputLines
-): InputPair | undefined {
-	for (let noun = 0; noun <= 99; noun++) {
-		for (let verb = 0; verb <= 99; verb++) {
-			const intcodeProgram = [...initialIntcodeProgram];
-			intcodeProgram[1] = noun;
-			intcodeProgram[2] = verb;
+): Promise<InputPair> {
+	return new Promise((resolve, reject) => {
+		for (let noun = 0; noun <= 99; noun++) {
+			for (let verb = 0; verb <= 99; verb++) {
+				const intcodeProgram = [...initialIntcodeProgram];
+				intcodeProgram[1] = noun;
+				intcodeProgram[2] = verb;
 
-			const actualOutput = part1(intcodeProgram);
+				const actualOutput = part1(intcodeProgram);
 
-			if (actualOutput[0] === expectedOutput) {
-				return {noun, verb};
+				if (actualOutput[0] === expectedOutput) {
+					return resolve({noun, verb});
+				}
 			}
 		}
-	}
 
-	throw new RangeError(`Could not find input noun and verb for the output ${expectedOutput}`);
+		return reject(new RangeError(`Could not find input noun and verb for the output ${expectedOutput}`));
+	});
 }
 
 /**
