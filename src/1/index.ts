@@ -18,7 +18,7 @@ export function calculateFuelRequirement(mass: number): number {
 export function calculateFuelRequirementRecursive(mass: number): number {
 	if (mass <= 0) {
 		return 0;
-  }
+	}
 
 	const fuelRequirementForMass = Math.max(calculateFuelRequirement(mass), 0);
 
