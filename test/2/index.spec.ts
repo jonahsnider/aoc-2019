@@ -11,9 +11,12 @@ test('part 1 solution', t => {
 test('input finder', t => {
 	// Confirmed to be correct from the answer page
 	t.deepEqual(inputFinder(19690720), {noun: 51, verb: 21});
+
+	const error = t.throws(() => inputFinder(-1, [0, 0, 0, 99]), RangeError);
+	t.is(error.message, 'Could not find input noun and verb for the output -1');
 });
 
 test('part 2 solution', t => {
 	// This is confirmed correct because it's provided as an example from AoC
-	t.is(part2({noun: 12, verb: 2}), 1202);
+	return t.is(part2({noun: 12, verb: 2}), 1202);
 });
