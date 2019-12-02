@@ -44,7 +44,7 @@
 		"all": true,
 		"extends": "@istanbuljs/nyc-config-typescript",
 		"include": [
-			"src/**/*.{t,j}s"
+			"src/**/*.ts"
 		],
 		"reporter": [
 			"lcov",
