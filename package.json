@@ -70,6 +70,9 @@
 		"extensions": [
 			"ts"
 		],
+		"ignores": [
+			"src/*/performance.js"
+		],
 		"prettier": true
 	}
 }
