@@ -112,5 +112,5 @@ function recursive(mass) {
 }
 
 function part2() {
-	return lines.map(mass => recursive).reduce((a, b) => a + b);
+	return lines.map(recursive).reduce((a, b) => a + b);
 }
