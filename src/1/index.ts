@@ -2,6 +2,16 @@ import {readFileSync} from 'fs';
 import {join} from 'path';
 
 /**
+ * Get the sum of two numbers.
+ * @param a First addend to use
+ * @param b Second addend to use
+ * @returns The sum of `a` and `b`
+ */
+function sum(a: number, b: number): number {
+	return a + b;
+}
+
+/**
  * Calculates the amount of fuel required to launch a module.
  * @param mass The mass of the module
  * @returns The amount of fuel required to launch the module
@@ -33,7 +43,7 @@ export function calculateFuelRequirementRecursive(mass: number): number {
 export function part1(inputPath: string = join(__dirname, 'input.txt')): number {
 	const lines = readFileSync(inputPath, 'utf-8').split('\n');
 	const fuelRequirements = lines.map(line => calculateFuelRequirement(parseInt(line, 10)));
-	return fuelRequirements.reduce((prev, cur) => prev + cur);
+	return fuelRequirements.reduce(sum);
 }
 
 /**
@@ -44,5 +54,5 @@ export function part1(inputPath: string = join(__dirname, 'input.txt')): number 
 export function part2(inputPath: string = join(__dirname, 'input.txt')): number {
 	const lines = readFileSync(inputPath, 'utf-8').split('\n');
 	const fuelRequirements = lines.map(line => calculateFuelRequirementRecursive(parseInt(line, 10)));
-	return fuelRequirements.reduce((prev, cur) => prev + cur);
+	return fuelRequirements.reduce(sum);
 }
