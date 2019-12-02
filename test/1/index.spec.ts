@@ -1,5 +1,5 @@
 import test from 'ava';
-import {calculateFuelRequirement, part1, calculateFuelRequirementRecursive, part2} from '../src/1';
+import {calculateFuelRequirement, part1, calculateFuelRequirementRecursive, part2} from '../../src/1';
 
 test('fuel calculation', t => {
 	// These values are confirmed to be correct for part 1 because they are provided by AoC https://adventofcode.com/2019/day/1

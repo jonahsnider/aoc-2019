@@ -101,7 +101,7 @@ var lines = [
 	80779
 ];
 
-function part1() {
+export function part1() {
 	return lines.map(mass => Math.floor(mass / 3) - 2).reduce((a, b) => a + b);
 }
 
@@ -111,6 +111,6 @@ function recursive(mass) {
 	return mass <= 0 ? 0 : fuel + recursive(fuel);
 }
 
-function part2() {
+export function part2() {
 	return lines.map(recursive).reduce((a, b) => a + b);
 }
