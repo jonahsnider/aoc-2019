@@ -10,6 +10,7 @@ test('part 1 solution', t => {
 
 test('input finder', async t => {
 	// Sometimes the error checking test hangs forever, so we set this limit to stop it
+	// eslint-disable-next-line ava/use-t-well
 	t.timeout(500);
 	// Required because of the promise based tests that are async
 	t.plan(3);
@@ -20,7 +21,7 @@ test('input finder', async t => {
 	};
 
 	// Confirmed to be correct from the answer page
-	inputFinderOutputs.working.then(inputs => t.deepEqual(inputs, {noun: 51, verb: 21}));
+	t.deepEqual(await inputFinderOutputs.working, {noun: 51, verb: 21});
 
 	const error = await t.throwsAsync(inputFinderOutputs.broken);
 	t.is(error.message, 'Could not find input noun and verb for the output -1');

@@ -59,7 +59,7 @@ interface InputPair {
  * @param expectedOutput What the pair of inputs would generate
  * @param initialIntcodeProgram The intcode to use in the program
  */
-export function inputFinder(
+export async function inputFinder(
 	expectedOutput = 19690720,
 	initialIntcodeProgram: number[] = inputLines
 ): Promise<InputPair> {
