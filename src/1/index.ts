@@ -18,11 +18,11 @@ export function calculateFuelRequirement(mass: number): number {
 export function calculateFuelRequirementRecursive(mass: number): number {
 	if (mass <= 0) {
 		return 0;
-	} else {
-		const fuelRequirementForMass = Math.max(calculateFuelRequirement(mass), 0);
+  }
 
-		return fuelRequirementForMass + calculateFuelRequirementRecursive(fuelRequirementForMass);
-	}
+	const fuelRequirementForMass = Math.max(calculateFuelRequirement(mass), 0);
+
+	return fuelRequirementForMass + calculateFuelRequirementRecursive(fuelRequirementForMass);
 }
 
 /**
@@ -32,7 +32,7 @@ export function calculateFuelRequirementRecursive(mass: number): number {
  */
 export function part1(inputPath: string = join(__dirname, 'input.txt')): number {
 	const lines = readFileSync(inputPath, 'utf-8').split('\n');
-	const fuelRequirements = lines.map(line => calculateFuelRequirement(parseInt(line)));
+	const fuelRequirements = lines.map(line => calculateFuelRequirement(parseInt(line, 10)));
 	return fuelRequirements.reduce((prev, cur) => prev + cur);
 }
 
@@ -43,6 +43,6 @@ export function part1(inputPath: string = join(__dirname, 'input.txt')): number 
  */
 export function part2(inputPath: string = join(__dirname, 'input.txt')): number {
 	const lines = readFileSync(inputPath, 'utf-8').split('\n');
-	const fuelRequirements = lines.map(line => calculateFuelRequirementRecursive(parseInt(line)));
+	const fuelRequirements = lines.map(line => calculateFuelRequirementRecursive(parseInt(line, 10)));
 	return fuelRequirements.reduce((prev, cur) => prev + cur);
 }
