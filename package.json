@@ -18,7 +18,7 @@
 		]
 	},
 	"bugs": {
-		"url": "https://github.com/pizzafox/typescript-starter/issues"
+		"url": "https://github.com/pizzafox/aoc-2019/issues"
 	},
 	"devDependencies": {
 		"@istanbuljs/nyc-config-typescript": "^0.1.3",
@@ -38,8 +38,8 @@
 		"node": "12"
 	},
 	"license": "Apache-2.0",
-	"main": "./tsc_output/src/index.js",
-	"name": "typescript-starter",
+	"main": "./tsc_output/src/1/solve.js",
+	"name": "aoc-2019",
 	"nyc": {
 		"all": true,
 		"extends": "@istanbuljs/nyc-config-typescript",
@@ -54,7 +54,7 @@
 	"private": true,
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/pizzafox/typescript-starter.git"
+		"url": "git+https://github.com/pizzafox/aoc-2019.git"
 	},
 	"scripts": {
 		"build": "tsc",
