@@ -27,6 +27,7 @@
 		"ava": "^2.4.0",
 		"eslint-config-xo-typescript": "^0.23.0",
 		"nyc": "^14.1.1",
+		"parcel": "^1.12.4",
 		"prettier": "^1.19.1",
 		"source-map-support": "^0.5.16",
 		"ts-node": "^8.5.4",
@@ -60,7 +61,8 @@
 		"lint": "xo",
 		"pretest": "rm -rf coverage .nyc_output",
 		"style": "prettier --ignore-path .gitignore --check \"./**/*.{{j,t}{s,sx},flow,{sc,c,le}ss,json,m{d,dx},{y,ya}ml}\"",
-		"test": "nyc ava"
+		"test": "nyc ava",
+		"test:no-cov": "ava"
 	},
 	"version": "1.0.0",
 	"xo": {
