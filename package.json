@@ -38,7 +38,7 @@
 		"node": "12"
 	},
 	"license": "Apache-2.0",
-	"main": "./tsc_output/src/1/solve.js",
+	"main": "./tsc_output/src/index.js",
 	"name": "aoc-2019",
 	"nyc": {
 		"all": true,
