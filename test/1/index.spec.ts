@@ -18,10 +18,10 @@ test('total fuel calculation', t => {
 
 test('part 1 solution', t => {
 	// Confirmed to be correct from the answer page
-	t.is(part1(), 3269199);
+	return t.is(part1(), 3269199);
 });
 
 test('part 2 solution', t => {
 	// Confirmed to be correct from the answer page
-	t.is(part2(), 4900909);
+	return t.is(part2(), 4900909);
 });
