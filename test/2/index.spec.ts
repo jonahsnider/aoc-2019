@@ -10,7 +10,6 @@ test('part 1 solution', t => {
 
 test('input finder', async t => {
 	// Sometimes the error checking test hangs forever, so we set this limit to stop it
-	// eslint-disable-next-line ava/use-t-well
 	t.timeout(500);
 	// Required because of the promise based tests that are async
 	t.plan(3);
