@@ -23,7 +23,7 @@
 	"devDependencies": {
 		"@istanbuljs/nyc-config-typescript": "^1.0.1",
 		"ava": "^2.4.0",
-		"nyc": "^15.0.0",
+		"nyc": "^15.0.1",
 		"parcel": "^1.12.4",
 		"prettier": "^1.19.1",
 		"source-map-support": "^0.5.16",
