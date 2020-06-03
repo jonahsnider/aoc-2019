@@ -42,7 +42,7 @@ export function calculateFuelRequirementRecursive(mass: number): number {
  */
 export function part1(inputPath: string = join(__dirname, 'input.txt')): number {
 	const lines = readFileSync(inputPath, 'utf-8').split('\n');
-	const fuelRequirements = lines.map(line => calculateFuelRequirement(parseInt(line, 10)));
+	const fuelRequirements = lines.map(line => calculateFuelRequirement(Number.parseInt(line, 10)));
 	return fuelRequirements.reduce(sum);
 }
 
@@ -53,6 +53,6 @@ export function part1(inputPath: string = join(__dirname, 'input.txt')): number 
  */
 export function part2(inputPath: string = join(__dirname, 'input.txt')): number {
 	const lines = readFileSync(inputPath, 'utf-8').split('\n');
-	const fuelRequirements = lines.map(line => calculateFuelRequirementRecursive(parseInt(line, 10)));
+	const fuelRequirements = lines.map(line => calculateFuelRequirementRecursive(Number.parseInt(line, 10)));
 	return fuelRequirements.reduce(sum);
 }
