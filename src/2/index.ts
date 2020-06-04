@@ -4,7 +4,7 @@ import {join} from 'path';
 const inputPath = join(__dirname, 'input.txt');
 const inputLines = readFileSync(inputPath, 'utf-8')
 	.split(',')
-	.map(line => parseInt(line, 10));
+	.map(line => Number.parseInt(line, 10));
 
 inputLines[1] = 12;
 inputLines[2] = 2;
